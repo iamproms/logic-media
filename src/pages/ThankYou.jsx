@@ -9,13 +9,13 @@ const ThankYou = () => {
             <div className="text-green-500 mb-4">
                 <CheckCircle size={64} />
             </div>
-            <h1 className="text-3xl md:text-5xl font-bold">Thank You!</h1>
+            <h1 className="text-3xl md:text-5xl font-bold text-foreground">Thank You!</h1>
             <p className="text-lg text-muted-foreground max-w-lg">
                 Your application has been received successfully. We will review your details and get back to you shortly.
             </p>
 
             <div className="pt-8">
-                <Button asChild variant="outline">
+                <Button asChild variant="outline" className="text-foreground border-input hover:bg-accent hover:text-accent-foreground">
                     <Link to="/">Return Home</Link>
                 </Button>
             </div>
