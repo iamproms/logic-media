@@ -19,6 +19,8 @@ const RecruitmentForm = () => {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         fullName: '',
+        email: '',
+        phone: '',
         joinMedia: '',
         subunits: [],
         doneLFC: '',
@@ -58,6 +60,12 @@ const RecruitmentForm = () => {
     const validate = () => {
         const newErrors = {};
         if (!formData.fullName) newErrors.fullName = 'Full Name is required';
+        if (!formData.email) {
+            newErrors.email = 'Email is required';
+        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+            newErrors.email = 'Email is invalid';
+        }
+        if (!formData.phone) newErrors.phone = 'Phone Number is required';
         if (!formData.joinMedia) newErrors.joinMedia = 'Please select an option';
         if (formData.subunits.length === 0) newErrors.subunits = 'Please select at least one subunit';
         if (!formData.doneLFC) newErrors.doneLFC = 'Please select an option';
@@ -130,6 +138,36 @@ const RecruitmentForm = () => {
                         className={errors.fullName ? "border-red-500" : ""}
                     />
                     {errors.fullName && <p className="text-red-500 text-xs mt-1">{errors.fullName}</p>}
+                </div>
+
+                {/* Email */}
+                <div className="space-y-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground">Email Address <span className="text-red-500">*</span></label>
+                    <Input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="Enter your email address"
+                        className={errors.email ? "border-red-500" : ""}
+                    />
+                    {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
+                </div>
+
+                {/* Phone Number */}
+                <div className="space-y-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-foreground">Phone Number <span className="text-red-500">*</span></label>
+                    <Input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="Enter your phone number"
+                        className={errors.phone ? "border-red-500" : ""}
+                    />
+                    {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                 </div>
 
                 {/* Join Media? */}
