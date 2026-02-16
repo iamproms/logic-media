@@ -16,7 +16,7 @@ const Navbar = () => {
         <nav className="bg-background border-b border-border/40 sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container-custom flex justify-between items-center h-16">
                 <Link to="/" className="text-2xl font-bold text-primary tracking-tighter">
-                    LOGIC MEDIA
+                    LOGIC STUDIOS
                 </Link>
 
                 {/* Desktop Menu */}
