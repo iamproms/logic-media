@@ -4,9 +4,9 @@ import { Button } from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 
 // Import images
-import heroImg from '../assets/images/about/DSC_3820.jpg';
-import teamImg1 from '../assets/images/about/DSC_6352.JPG';
-import teamImg2 from '../assets/images/about/DSC_6615.jpg';
+import heroImg from '../assets/images/about/DSC_3820.webp';
+import teamImg1 from '../assets/images/about/DSC_6352.webp';
+import teamImg2 from '../assets/images/about/DSC_6615.webp';
 
 const SectionHeader = ({ title, subtitle, className = "" }) => (
     <div className={`text-center mb-16 ${className}`}>
@@ -74,6 +74,7 @@ const About = () => {
                         src={heroImg}
                         alt="LOGIC Studios Team"
                         className="w-full h-full object-cover object-center scale-105" // Slight scale to avoid whitespace on certain ratios
+                        fetchpriority="high"
                     />
                     {/* Advanced Gradient Overlay for text readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-black/60 to-black/30" />
