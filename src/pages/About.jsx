@@ -241,8 +241,8 @@ const About = () => {
                 </div>
             </section>
 
-            {/* 6. Meet the Leadership */}
-            <section className="py-24 bg-muted/30 border-y border-border/50">
+            {/* 6. Meet the Leadership — TEMPORARILY HIDDEN (names & images pending) */}
+            {/* <section className="py-24 bg-muted/30 border-y border-border/50">
                 <div className="container px-4">
                     <SectionHeader
                         title="Meet the Media Leadership"
@@ -250,7 +250,6 @@ const About = () => {
                     />
 
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12 justify-items-center max-w-6xl mx-auto">
-                        {/* Placeholder Avatars */}
                         <LeadershipCard name="Name Here" role="Media Director" />
                         <LeadershipCard name="Name Here" role="Videography Lead" />
                         <LeadershipCard name="Name Here" role="Photography Lead" />
@@ -261,7 +260,7 @@ const About = () => {
                         <LeadershipCard name="Name Here" role="Creative Lead" />
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* 7. Join the Team CTA */}
             <section className="py-32 relative overflow-hidden flex items-center justify-center">
