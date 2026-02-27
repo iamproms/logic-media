@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 // Import images
 import heroImg from '../assets/images/about/DSC_3820.webp';
-import teamImg1 from '../assets/images/about/DSC_6352.webp';
-import teamImg2 from '../assets/images/about/DSC_6615.webp';
+import teamImg1 from '../assets/images/about/DSC_6352.JPG';
+import teamImg2 from '../assets/images/about/DSC_6615.jpg';
 
 const SectionHeader = ({ title, subtitle, className = "" }) => (
     <div className={`text-center mb-16 ${className}`}>
